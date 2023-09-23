@@ -1,0 +1,1 @@
+- [x] https://codeforces.com/gym/436386/problem/A

@@ -1,0 +1,7 @@
+def isPrime(x: int) -> bool:
+    d = 2
+    while d * d <= x:
+        if x % d == 0:
+            return False
+        d += 1
+    return True
