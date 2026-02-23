@@ -1,16 +1,19 @@
 
-def soln(n, m, k):
-    games=[]
-    for i in k:
+def soln(n, m, allGames):
+    # this have lenght of n
+    curGame=[]
+    for game in allGames:
         d={}
-        for j in range(len(i)):
-            d[i[j]]=j
-        games.append(d)
+        # make the player as key and his index as a value
+        for playerIdx in range(len(game)):
+            d[game[playerIdx]]=playerIdx
+        #append the player game index into the dictionary
+        curGame.append(d)
 
-
+    # check the two players have been on opposite team 
     def check(p1, p2):
         played=False
-        for i in games:
+        for i in curGame:
             N= len(i)
             if i[p1]<N/2 and i[p2] >=N/2:
                 played=True
